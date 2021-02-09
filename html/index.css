@@ -1,0 +1,35 @@
+body {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin-left: 100px;
+}
+
+ol {
+    /*list-style-type: 'I' ;*/
+    /*list-style: upper-latin;*/
+    line-height: 200%;
+}
+
+li {
+    font-size: 24px;
+    color: midnightblue;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.button-remove {
+    margin-left: 10px;
+    background-color: orangered;
+    border-radius: 5px;
+}
+
+.checkbox {
+    color: darkseagreen;
+}
