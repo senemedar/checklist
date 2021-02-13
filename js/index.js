@@ -1,36 +1,19 @@
 let list = $(".list");
 
-// $(".list").hover(
-//     function() {
-//         $( this ).append( $( "<input type='button' class='button-remove' name='addItem' onclick='removeElementFromList(this)' value='X'>" ) );
-//     }, function() {
-//         $( this ).find( ".button-remove" ).last().remove();
-//     }
-// );
-
-$("input:checkbox").click(
-    function() {
-        $(this).next().toggleClass("crossed-out");
-    }
-);
-
 function addElementToList() {
-    let element = '<li><input type="checkbox">';
+    let element = '<li><input type="checkbox" class="checkbox" onclick="toggleDone(this)"><span>';
     let textElement = $(".newItemField");
     let text = textElement.val();
     if (text !== "") {
-        list.append(element + text + " </li>");
-        $("li").last().hover(
-            function() {
-                $( this ).append( $( "<input type='button' class='button-remove' name='addItem' onclick='removeElementFromList(this)' value='X'>" ) );
-            }, function() {
-                $( this ).find( ".button-remove" ).last().remove();
-            }
-        );
+        list.append(element + text + "</span><input type=\"button\" class=\"button-remove invisible\" name=\"addItem\" onclick=\"removeElementFromList(this)\" value=\"X\">");
         textElement.val("");
     }
 }
 
 function removeElementFromList(element) {
     $(element).parent().remove();
+}
+
+function toggleDone(element) {
+            $(element).next().toggleClass("crossed-out");
 }

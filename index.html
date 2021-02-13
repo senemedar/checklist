@@ -1,5 +1,4 @@
 <?php
-//    session_start();
     include "php/database.php";
     $todoItems = getDataFromDatabase();
 ?>
@@ -21,10 +20,9 @@
         <ol class="list">
             <?php
                 for ($i=0; $i < count($todoItems); $i++) {
-                    echo '<li class="show-me"><input id="item'.$i.'" type="checkbox" class="checkbox"><span>';
+                    echo '<li class="show-me"><input id="item'.$i.'" type="checkbox" class="checkbox" onclick="toggleDone(this)"><span>';
                     echo $todoItems[$i][1];
                     echo '</span><input type="button" class="button-remove invisible" name="addItem" onclick="removeElementFromList(this)" value="X"></li>';
-
                 }
             ?>
         </ol>
