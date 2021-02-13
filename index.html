@@ -22,9 +22,12 @@
         <ol class="list">
             <?php
                 for ($i=0; $i < count($todoItems); $i++) {
-                    echo "<li><input id=\"item".$i."\" type=\"checkbox\" class=\"checkbox\"><span>".$todoItems[$i][1]."</span></li>";
+                    echo '<li class="show-me"><input id="item'.$i.'" type="checkbox" class="checkbox"><span>';
+                    echo $todoItems[$i][1];
+//                    echo $todoItems[0][0], $todoItems[0][1];
+                    echo '</span><input type="button" class="button-remove invisible" name="addItem" onclick="removeElementFromList(this)" value="X"></li>';
+
                 }
-//                echo $todoItems[0][0], $todoItems[0][1];
             ?>
 <!--            <li>-->
 <!--                <input type="checkbox"><span>Ładowarki</span>-->

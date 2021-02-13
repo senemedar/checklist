@@ -1,12 +1,12 @@
 let list = $(".list");
 
-list.hover(
-    function() {
-        $( this ).append( $( "<input type='button' class='button-remove' name='addItem' onclick='removeElementFromList(this)' value='X'>" ) );
-    }, function() {
-        $( this ).find( ".button-remove" ).last().remove();
-    }
-);
+// $(".list").hover(
+//     function() {
+//         $( this ).append( $( "<input type='button' class='button-remove' name='addItem' onclick='removeElementFromList(this)' value='X'>" ) );
+//     }, function() {
+//         $( this ).find( ".button-remove" ).last().remove();
+//     }
+// );
 
 $("input:checkbox").click(
     function() {

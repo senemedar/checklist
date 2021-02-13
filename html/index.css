@@ -33,3 +33,11 @@ li {
 .checkbox {
     color: darkseagreen;
 }
+
+input.invisible {
+    display: none;
+}
+
+li:hover > input {
+    display: inline-block;
+}
