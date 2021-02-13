@@ -39,5 +39,5 @@ input.invisible {
 }
 
 li:hover > input {
-    display: inline-block;
+    display: inline;
 }
